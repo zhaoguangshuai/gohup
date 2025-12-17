@@ -58,7 +58,7 @@ func (vc *VerifyCodeController) SendUsingEmail(c *gin.Context) {
 	// 2. 发送邮件
 	err := verifycode.NewVerifyCode().SendEmail(request.Email)
 	if err != nil {
-		response.Abort500(c, "发送 Email 验证码失败~")
+		response.Abort500(c, "发送 Email 验证码失败!")
 	} else {
 		response.Success(c)
 	}
